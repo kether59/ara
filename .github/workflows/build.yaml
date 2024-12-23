@@ -292,7 +292,7 @@ jobs:
         with:
           version: v3.4.0
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v4
         with:
           working_directory: charts/candidate
           semantic_version: 18
