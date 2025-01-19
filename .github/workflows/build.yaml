@@ -121,7 +121,7 @@ jobs:
       - name: Add host binding
         run: sudo echo "127.0.0.1 oauth2.dev.localhost" >> sudo tee -a /etc/hosts
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: start oauth2-dev-server
@@ -224,7 +224,7 @@ jobs:
           echo ::set-output name=push::${PUSH}
           echo ::set-output name=suffix::${SUFFIX}
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+        uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - if: ${{ steps.prep.outputs.push == 'true' }}
